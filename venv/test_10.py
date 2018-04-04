@@ -1,3 +1,4 @@
+#encoding: utf-8
 # filename = '/home/lydia/桌面/py_test/pi_million_digits.txt'
 #
 # with open(filename) as file_object:
@@ -83,7 +84,7 @@
 #     print("File is not exist!")
 
 """10.3.6"""
-
+import time
 title = 'Alice is a girl'
 words = title.split()
 print(words)
@@ -104,7 +105,7 @@ else:
     print("The file " + filename + " has about " + str(num_words) + " words.")
 
 with open(filename, 'a') as file_object:
-    file_object.write("字数：" + str(word_num))
+    file_object.write("字数：" + str(word_num) + " " + str(time.strftime("%H:%M:%S")))
 
 """10.3.7 使用多个文件"""
 # file_1 = '/home/lydia/桌面/py_test/learning_py.txt'
