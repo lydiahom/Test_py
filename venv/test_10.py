@@ -84,24 +84,27 @@
 
 """10.3.6"""
 
-# title = 'Alice is a girl'
-# words = title.split()
-# print(words)
-# word_num = len(words)
-# print(word_num)
+title = 'Alice is a girl'
+words = title.split()
+print(words)
+word_num = len(words)
+print(word_num)
 
-# filename = '/home/lydia/桌面/py_test/alice.txt'
-# try:
-#     with open(filename) as f_obj:
-#         contents = f_obj.read()
-# except FileNotFoundError:
-#     msg = "Sorry, the file " + filename + " does not exist."
-#     print(msg)
-# else:
-# # 计算文件大致包含多少个单词
-#     words = contents.split()
-#     num_words = len(words)
-#     print("The file " + filename + " has about " + str(num_words) + " words.")
+filename = '/home/lydia/桌面/py_test/alice.txt'
+try:
+    with open(filename) as f_obj:
+        contents = f_obj.read()
+except FileNotFoundError:
+    msg = "Sorry, the file " + filename + " does not exist."
+    print(msg)
+else:
+# 计算文件大致包含多少个单词
+    words = contents.split()
+    num_words = len(words)
+    print("The file " + filename + " has about " + str(num_words) + " words.")
+
+with open(filename, 'a') as file_object:
+    file_object.write("字数：" + str(word_num))
 
 """10.3.7 使用多个文件"""
 # file_1 = '/home/lydia/桌面/py_test/learning_py.txt'
