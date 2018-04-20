@@ -105,7 +105,7 @@ else:
     print("The file " + filename + " has about " + str(num_words) + " words.")
 
 with open(filename, 'a') as file_object:
-    file_object.write("字数：" + str(word_num) + " " + str(time.strftime("%H:%M:%S")))
+    file_object.write("字数：" + str(word_num) + " " + "时间：" + str(time.strftime("%Y-%m-%d %H:%M:%S")) + "\r\n")
 
 """10.3.7 使用多个文件"""
 # file_1 = '/home/lydia/桌面/py_test/learning_py.txt'
